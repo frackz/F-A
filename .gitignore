@@ -1,3 +1,4 @@
 web
 scripts
-node-modules
+node_modules
+config.json
