@@ -29,7 +29,7 @@ module.exports = {
                         "description": "You now have an F&A Store account.\nYou can now have an license, find it using /account.\n\nSet a license-password to be able to secure your license, using /password",
                         "color": 3913457
                     }
-                ]})
+                ], ephemeral: true})
             } else {
                 const days = 3-Math.round((Date.now()-creationDate)/1000/60/60/24)
                 return interaction.reply({embeds:[
@@ -38,7 +38,7 @@ module.exports = {
                     "description": "Your account need to be over **3** days old to create an F&A account.\nYou need wait **"+days+"** days to be able to register.",
                     "color": 16734296
                 }
-                ]})
+                ], ephemeral: true})
             }
         } else {
             return interaction.reply({embeds:[
@@ -47,7 +47,7 @@ module.exports = {
                     "description": "You already have an account, and therefore you cannot create register an new one.",
                     "color": 15809353
                 }
-            ]})
+            ], ephemeral: true})
         }
     }
 }

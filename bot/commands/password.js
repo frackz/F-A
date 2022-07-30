@@ -22,7 +22,7 @@ module.exports = {
                 "description": "You do not have an account\n\nUse the command /register to register an FA Store Account.",
                 "color": 15809353
             }
-            ]})
+            ], ephemeral: true})
         } else {
             if (password.length <= 3) {
                 return interaction.reply({embeds:[
@@ -31,7 +31,7 @@ module.exports = {
                         "description": "Your password needs to be over 3 characters.\nPlease type a new one.",
                         "color": 16401990
                     }
-                ]})
+                ], ephemeral: true})
             }
 
             db.prepare('UPDATE `license` SET `password` = ? WHERE `ownerid` = ?').run(password, interaction.user.id)
@@ -42,7 +42,7 @@ module.exports = {
                     "description": "Your account now has a new password.\nIf you wanna see your new password, use /account.",
                     "color": 3913457
                 }
-            ]})    
+            ], ephemeral: true})    
         }
     }
 }

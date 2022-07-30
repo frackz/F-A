@@ -13,7 +13,7 @@ module.exports = {
                 "description": "You do not have any data to show. :interrobang:\n\nUse the command /register to register an FA Store Account.",
                 "color": 15809353
             }
-            ]})
+            ], ephemeral: true})
         } else {
             const license = data.license
             return interaction.reply({embeds:[
@@ -22,7 +22,7 @@ module.exports = {
                     "description": "Here you got some data on your account. \nPlease do not share any of these details, or else users can stell your *license*.\n**License**: ||"+license+"||\n**Owner**: "+interaction.user.id+"\n**License Password**: ||"+data.password+"||\n**Scripts**:",
                     "color": 3913457
                 }
-            ]})    
+            ], ephemeral: true})    
         }
     }
 }
