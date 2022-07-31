@@ -17,7 +17,6 @@ module.exports = class BotManager extends Discord.Client {
 
     run() {
         this.on('ready', () => {
-            console.log("hey")
             this.user.setPresence({
                 activities: [{ name: `licensing`, type: Discord.ActivityType.Watching }],
                 status: 'dnd',
